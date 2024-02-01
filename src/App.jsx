@@ -6,7 +6,7 @@ import foodPic from './assets/food1.jpg';
 function App() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setFirstName("");
     setLastName("");
@@ -15,14 +15,14 @@ function App() {
 
   return (
     <>
-    <section className='bookTableContainer'>
-        <h2 className='title'>Little Lemon</h2>
-        <h3 className='findTable'>Find a table for any occasion</h3>
-        <div className='imgContainer'>
-          <img src={tablePic} alt='table pic' className='tablePic'/>
-          <img src={foodPic} alt='food pic' className='foodPic' />
+    <section className='w-full min-h-screen flex flex-col items-center'>
+        <h2 className='title text-center'>Little Lemon</h2>
+        <h3 className='text-center'>Find a table for any occasion</h3>
+        <div className='flex items-center justify-center'>
+          <img src={tablePic} alt='table pic' className='w-1/3 h-auto'/>
+          <img src={foodPic} alt='food pic' className='w-1/3 h-auto' />
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='w-full max-w-md'>
           <div>
             <label htmlFor='firstName'>First Name</label>
             <input 
@@ -71,7 +71,7 @@ function App() {
               <option>Anniversary</option>
             </select>
           </div>
-          <button type='submit' className='submitBtn'>Make Your Reservation</button>
+          <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-auto'>Make Your Reservation</button>
         </form>
     </section>
     </>
