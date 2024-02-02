@@ -9,7 +9,7 @@ function NavBar() {
         <>
             <nav className='w-full flex justify-between align-center'>
                 <img src={hamburgerMenuIcon} alt='hamburgerMenuIcon' className='w-8 h-8 m-4'/>
-                <img src={lemonLogo} alt="Lemon Logo" className='w-40 h-40 '/>
+                <img src={lemonLogo} alt="Lemon Logo" className='w-40 h-2/5'/>
                 <img src={shoppingCart} alt="Cart Icon" className='w-14 h-14 m-4'/>
             </nav>
         </>
